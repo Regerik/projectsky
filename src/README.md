@@ -30,4 +30,17 @@ operations = [
     {'id': 1, 'state': 'EXECUTED', 'date': '2024-01-10'},
     {'id': 2, 'state': 'CANCELED', 'date': '2024-01-11'}
 ]
-print(filter_by_state(operations)) 
+print(filter_by_state(operations))
+
+## Тестирование
+
+Запуск тестов:
+
+pytest
+
+## Отчет о покрытии
+
+pytest --cov=src --cov-report=html
+
+После выполнения откройте htmlcov/index.html в браузере.
+
