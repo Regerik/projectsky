@@ -44,3 +44,31 @@ pytest --cov=src --cov-report=html
 
 После выполнения откройте htmlcov/index.html в браузере.
 
+## Генераторы
+
+### filter_by_currency()
+Фильтрует транзакции по валюте:
+
+```python
+from src.generators import filter_by_currency
+
+usd_transactions = filter_by_currency(transactions, "USD")
+for transaction in usd_transactions:
+    print(transaction["id"])
+    
+### transaction_descriptions()
+
+from src.generators import transaction_descriptions
+
+descriptions = transaction_descriptions(transactions)
+for desc in descriptions:
+    print(desc)
+from src.generators import card_number_generator
+
+### card_number_generator()
+
+for card in card_number_generator(1, 5):
+    print(card)
+# 0000 0000 0000 0001
+# 0000 0000 0000 0002
+# ...
