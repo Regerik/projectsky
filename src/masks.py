@@ -3,7 +3,6 @@ def get_mask_card_number(card_number: str) -> str:
         card_number[:4]
         + " "
         + card_number[4:6]
-        + " "
         + "**"
         + " "
         + "****"
